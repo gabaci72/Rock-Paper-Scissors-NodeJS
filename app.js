@@ -33,9 +33,11 @@ function handlePostResponse(request, response) {
     // Receive chunks on 'data' event and concatenate to body variable
     let body = '';
     request.on('data', function (chunk) {
-        body += chunk;
+        body += chunk;        
     });
-
+  
+   
+    
     // When done receiving data, select a random choice for server
     // Compare server choice with player's choice and send an appropriate message back
     request.on('end', function () {

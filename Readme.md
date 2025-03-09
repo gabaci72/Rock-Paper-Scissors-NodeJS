@@ -18,6 +18,7 @@ This project implements a web-based version of the classic game Rock-Paper-Sciss
 
 2. **Install dependencies:**
     ```bash
+    npm init -y
     npm install
     ```
 
