@@ -1,27 +1,30 @@
 const fs = require('fs');
 // TODO: Require the http module
-const http = require('http'); // Import Node.js core module
+const http = require('http');
 // TODO: Create a server
-const server = http.createServer((request, response) => {}); // Create an HTTP server
-// TODO: Create a url object with request url and host name
+const server = http.createServer((request, response) => {
+    // Handle incoming requests and send responses here
 
-// TODO: Create a switch statement based on pathname of url
+    // TODO: Create a url object with request url and host name
+    const url = new URL(request.url, `http://${request.headers.host}`);
 
-// TODO: Check if request method is GET
+    // TODO: Create a switch statement based on pathname of url
 
-// TODO: Get value of 'name' query
+    // TODO: Check if request method is GET
 
-// TODO: Write response header
+    // TODO: Get value of 'name' query
 
-// TODO: Pipe index.html to response
+    // TODO: Write response header
+
+    // TODO: Pipe index.html to response
 
 
-// TODO: Check if request is POST and if so, run handlePostResponse()
+    // TODO: Check if request is POST and if so, run handlePostResponse()
 
-// TODO: Write response header
+    // TODO: Write response header
 
-// TODO: Pipe 404.html to response
-
+    // TODO: Pipe 404.html to response
+});
 
 // TODO: Have server listen at port 4001
 
@@ -33,11 +36,9 @@ function handlePostResponse(request, response) {
     // Receive chunks on 'data' event and concatenate to body variable
     let body = '';
     request.on('data', function (chunk) {
-        body += chunk;        
+        body += chunk;
     });
-  
-   
-    
+
     // When done receiving data, select a random choice for server
     // Compare server choice with player's choice and send an appropriate message back
     request.on('end', function () {
