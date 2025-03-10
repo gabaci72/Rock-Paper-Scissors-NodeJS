@@ -1,6 +1,6 @@
 const fs = require('fs');
 // TODO: Require the http module
-
+const http = require('http'); // Import Node.js core module
 // TODO: Create a server
 
 // TODO: Create a url object with request url and host name
