@@ -55,13 +55,12 @@ switch(expression){
 ```
 
 ## Handling Get Requests
-5.
-Inside the case for '/', create an if statement that checks if the request method is equal to 'GET'.
+[X] 5. Inside the case for '/', create an if statement that checks if the request method is equal to 'GET'.
 
 Remember that you can get the request method by accessing the method property of the request object.
-
+```js
 console.log(request.method);
-
+```
 
 6.
 Inside the if statement checking for 'GET' requests, create a const variable called name and save the value of the 'name' query using url.searchParams.get() method.

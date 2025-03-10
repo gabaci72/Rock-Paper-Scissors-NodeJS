@@ -12,7 +12,9 @@ const server = http.createServer((request, response) => {
         case '/':
     }
     // TODO: Check if request method is GET
-
+    if (request.method === 'GET') {
+        console.log(request.method); // Log request method to console
+    }
     // TODO: Get value of 'name' query
 
     // TODO: Write response header
