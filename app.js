@@ -19,6 +19,10 @@ const server = http.createServer((request, response) => {
 
                 // TODO: Write response header
                 response.writeHead(200, { 'Content-Type': 'text/html' });
+
+                // TODO: Pipe index.html to response
+                fs.createReadStream('index.html').pipe(response);
+                break;
             }
 
             break;
@@ -31,7 +35,7 @@ const server = http.createServer((request, response) => {
 
 
 
-    // TODO: Pipe index.html to response
+  
 
 
     // TODO: Check if request is POST and if so, run handlePostResponse()

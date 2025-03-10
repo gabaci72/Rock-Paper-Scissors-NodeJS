@@ -77,21 +77,19 @@ response.writeHead(statusCode, {
 })
 ```
 
-8.
-We will want to display the index.html page when users access the root of our website.
+[X] 8. We will want to display the index.html page when users access the root of our website.
 
 Let’s read our index.html file using the .createReadStream() method of the fs module and pipe the data to the response by chaining the .pipe() method.
 
 Then, add a break statement at the end of the if statement code block.
 
 You can chain the .pipe() method to the .createReadStream() method like below:
-
+```js
 fs.createReadStream('filename.ext').pipe(destination);
+```
 
-
-Handling Post Response
-9.
-Let’s handle another request method! Create an else if statement that checks for the 'POST' request method.
+## Handling Post Response
+[] 9. Let’s handle another request method! Create an else if statement that checks for the 'POST' request method.
 
 Inside the else if statement, call the handlePostResponse() function, defined at the bottom of app.js. Pass in request and response as arguments of the function.
 
