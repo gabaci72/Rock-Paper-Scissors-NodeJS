@@ -97,22 +97,20 @@ Then, add a break statement at the end of the else if statement.
 
 Remember to add the break statement AFTER the handlePostResponse() function call!
 
-Handling Default Case
-10.
-Let’s complete our switch statement. Inside the default case, we will display 404.html if a user tries to access a page or a file that doesn’t exist.
+## Handling Default Case
+[X] 10. Let’s complete our switch statement. Inside the default case, we will display 404.html if a user tries to access a page or a file that doesn’t exist.
 
 Write a response header using the .writeHead() method of the response object. Set an appropriate status code for a page or file not found and the status message as a JSON array that contains the 'Content-Type' key and 'text/html' value.
 
 404 is the status code for Page/File Not Found.
 
-11.
-Now, read 404.html using the .createReadStream() method of the fs module and pipe the data to the response by chaining the .pipe() method.
+[X] 11. Now, read 404.html using the .createReadStream() method of the fs module and pipe the data to the response by chaining the .pipe() method.
 
 Then, add a break statement at the end of the code block.
 
 Remember that you can chain the .pipe() method right after .createReadStream().
 
-Running the Server
+## Running the Server
 12.
 Finally, let’s have our server listen at port 4001 using the .listen() method. As the second argument of the .listen() method, create an anonymous callback function using the arrow function syntax.
 

@@ -25,29 +25,22 @@ const server = http.createServer((request, response) => {
                 break;
             }
             // TODO: Check if request is POST and if so, run handlePostResponse()
+            // TODO: Check if request is POST and if so, run handlePostResponse()
             else if (request.method === 'POST') {
                 handlePostResponse(request, response);
                 break;
             }
-
-            break;
         default:
-            // Code to process default case goes here
+            // TODO: Write response header
+            // TODO: Pipe 404.html to response
+            response.writeHead(404, { 'Content-Type': 'text/html' });
+
+            // Read and pipe the 404.html file to the response
+            fs.createReadStream('404.html').pipe(response);
             break;
     }
 
-
-
-
-
   
-
-
-    // TODO: Check if request is POST and if so, run handlePostResponse()
-
-    // TODO: Write response header
-
-    // TODO: Pipe 404.html to response
 });
 
 // TODO: Have server listen at port 4001
