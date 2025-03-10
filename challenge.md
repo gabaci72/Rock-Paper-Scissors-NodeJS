@@ -89,7 +89,7 @@ fs.createReadStream('filename.ext').pipe(destination);
 ```
 
 ## Handling Post Response
-[] 9. Let’s handle another request method! Create an else if statement that checks for the 'POST' request method.
+[X] 9. Let’s handle another request method! Create an else if statement that checks for the 'POST' request method.
 
 Inside the else if statement, call the handlePostResponse() function, defined at the bottom of app.js. Pass in request and response as arguments of the function.
 

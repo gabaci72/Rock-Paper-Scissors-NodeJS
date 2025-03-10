@@ -24,6 +24,11 @@ const server = http.createServer((request, response) => {
                 fs.createReadStream('index.html').pipe(response);
                 break;
             }
+            // TODO: Check if request is POST and if so, run handlePostResponse()
+            else if (request.method === 'POST') {
+                handlePostResponse(request, response);
+                break;
+            }
 
             break;
         default:
