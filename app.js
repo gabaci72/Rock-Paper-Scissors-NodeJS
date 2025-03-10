@@ -1,6 +1,6 @@
-const fs = require('fs');
+const fs = require("fs");
 // TODO: Require the http module
-const http = require('http');
+const http = require("http");
 // TODO: Create a server
 const server = http.createServer((request, response) => {
     // Handle incoming requests and send responses here
@@ -9,60 +9,56 @@ const server = http.createServer((request, response) => {
     const url = new URL(request.url, `http://${request.headers.host}`);
     // TODO: Create a switch statement based on pathname of url
     switch (url.pathname) {
-        case '/':
+        case "/":
             // Code to process GET requests goes here
             // TODO: Check if request method is GET
-            if (request.method === 'GET') {
+            if (request.method === "GET") {
                 // Get the 'name' query parameter
-                const name = url.searchParams.get('name');
-                console.log('Name query parameter:', name); // Log the value of 'name'
+                const name = url.searchParams.get("name");
+                console.log("Name query parameter:", name); // Log the value of 'name'
 
                 // TODO: Write response header
-                response.writeHead(200, { 'Content-Type': 'text/html' });
+                response.writeHead(200, { "Content-Type": "text/html" });
 
                 // TODO: Pipe index.html to response
-                fs.createReadStream('index.html').pipe(response);
+                fs.createReadStream("index.html").pipe(response);
                 break;
             }
             // TODO: Check if request is POST and if so, run handlePostResponse()
-            // TODO: Check if request is POST and if so, run handlePostResponse()
-            else if (request.method === 'POST') {
+            else if (request.method === "POST") {
                 handlePostResponse(request, response);
                 break;
             }
         default:
-            // TODO: Write response header
-            // TODO: Pipe 404.html to response
-            response.writeHead(404, { 'Content-Type': 'text/html' });
+            // Write the response header for 404 Not Found
+            response.writeHead(404, { "Content-Type": "text/html" });
 
             // Read and pipe the 404.html file to the response
-            fs.createReadStream('404.html').pipe(response);
+            fs.createReadStream("404.html").pipe(response);
             break;
     }
-
-  
 });
 
-// TODO: Have server listen at port 4001
-// Start the server
-// server.listen(4001, () => {
-//     console.log('Server is listening on http://localhost:4001');
-// });
+//TODO: Have server listen at port 4001
+//Start the server
+server.listen(4001, () => {
+    console.log(`Server is listening on port ${server.address().port}`);
+});
 
 // Function for handling POST responses
 function handlePostResponse(request, response) {
-    request.setEncoding('utf8');
+    request.setEncoding("utf8");
 
     // Receive chunks on 'data' event and concatenate to body variable
-    let body = '';
-    request.on('data', function (chunk) {
+    let body = "";
+    request.on("data", function (chunk) {
         body += chunk;
     });
 
     // When done receiving data, select a random choice for server
     // Compare server choice with player's choice and send an appropriate message back
-    request.on('end', function () {
-        const choices = ['rock', 'paper', 'scissors'];
+    request.on("end", function () {
+        const choices = ["rock", "paper", "scissors"];
         const randomChoice = choices[Math.floor(Math.random() * 3)];
 
         const choice = body;
@@ -76,15 +72,15 @@ function handlePostResponse(request, response) {
         if (choice === randomChoice) {
             message = tied;
         } else if (
-            (choice === 'rock' && randomChoice === 'paper') ||
-            (choice === 'paper' && randomChoice === 'scissors') ||
-            (choice === 'scissors' && randomChoice === 'rock')
+            (choice === "rock" && randomChoice === "paper") ||
+            (choice === "paper" && randomChoice === "scissors") ||
+            (choice === "scissors" && randomChoice === "rock")
         ) {
             message = defeat;
         } else {
             message = victory;
         }
-        response.writeHead(200, { 'Content-Type': 'text/plain' });
+        response.writeHead(200, { "Content-Type": "text/plain" });
         response.end(`You selected ${choice}. ${message}`);
     });
 }

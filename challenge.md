@@ -111,20 +111,19 @@ Then, add a break statement at the end of the code block.
 Remember that you can chain the .pipe() method right after .createReadStream().
 
 ## Running the Server
-12.
-Finally, let’s have our server listen at port 4001 using the .listen() method. As the second argument of the .listen() method, create an anonymous callback function using the arrow function syntax.
+[X] 12. Finally, let’s have our server listen at port 4001 using the .listen() method. As the second argument of the .listen() method, create an anonymous callback function using the arrow function syntax.
 
 Inside the callback function, log that the server is listening at server.address().port.
 
 Remember that you can pass in a callback function defined using the arrow function notation as an argument like below:
 
+```js
 myFunction(argOne, () => {
   // Do something
 });
+```
 
-
-13.
-Try out our Rock-Paper-Scissors game by running the app with the node command then clicking on the “Refresh Browser” button.
+[X] 13. Try out our Rock-Paper-Scissors game by running the app with the node command then clicking on the “Refresh Browser” button.
 
 Add a name query with your name as its value. For example, try navigating to http://localhost:4001/?name=Codey. See that the header text in index.html changes!
 
