@@ -8,7 +8,9 @@ const server = http.createServer((request, response) => {
     // TODO: Create a url object with request url and host name
     const url = new URL(request.url, `http://${request.headers.host}`); 
     // TODO: Create a switch statement based on pathname of url
-
+    switch (url.pathname) {
+        case '/':
+    }
     // TODO: Check if request method is GET
 
     // TODO: Get value of 'name' query

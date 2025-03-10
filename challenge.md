@@ -26,7 +26,7 @@ const myFunction = (argOne, argTwo) => {
 ```
 
 ## Routing
-[] 3. Inside the callback function of the .createServer() method, create a new URL object and save it to a const variable called url. Initialize the URL object with two arguments: request.url and http://${request.headers.host}.
+[X] 3. Inside the callback function of the .createServer() method, create a new URL object and save it to a const variable called url. Initialize the URL object with two arguments: request.url and http://${request.headers.host}.
 
 URL is like any other JavaScript object. You can create a new instance of it like below:
 
@@ -36,11 +36,11 @@ const url = new URL();
 
 Provide the constructor function with appropriate arguments.
 
-4.
-Now, let’s create a switch statement that evaluates the value of url.pathname. Inside the switch statement, create two cases: a case that matches '/' and a default case.
+[X] 4. Now, let’s create a switch statement that evaluates the value of url.pathname. Inside the switch statement, create two cases: a case that matches '/' and a default case.
 
 Remember that the syntax for creating switch statements in JavaScript looks like below:
 
+```js
 switch(expression){
   case valueOne:
     // Do something for this case
@@ -52,7 +52,7 @@ switch(expression){
     // Do something by default
     break;
 }
-
+```
 
 ## Handling Get Requests
 5.
