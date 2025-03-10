@@ -6,8 +6,7 @@ const server = http.createServer((request, response) => {
     // Handle incoming requests and send responses here
 
     // TODO: Create a url object with request url and host name
-    const url = new URL(request.url, `http://${request.headers.host}`);
-
+    const url = new URL(request.url, `http://${request.headers.host}`); 
     // TODO: Create a switch statement based on pathname of url
 
     // TODO: Check if request method is GET
