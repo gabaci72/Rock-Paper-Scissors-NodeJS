@@ -10,6 +10,11 @@ const server = http.createServer((request, response) => {
     // TODO: Create a switch statement based on pathname of url
     switch (url.pathname) {
         case '/':
+            // Code to process GET requests goes here
+            break;
+        default:
+            // Code to process default case goes here
+            break;
     }
     // TODO: Check if request method is GET
     if (request.method === 'GET') {

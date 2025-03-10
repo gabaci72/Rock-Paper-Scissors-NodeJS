@@ -55,7 +55,7 @@ switch(expression){
 ```
 
 ## Handling Get Requests
-[X] 5. Inside the case for '/', create an if statement that checks if the request method is equal to 'GET'.
+[] 5. Inside the case for '/', create an if statement that checks if the request method is equal to 'GET'.
 
 Remember that you can get the request method by accessing the method property of the request object.
 ```js
