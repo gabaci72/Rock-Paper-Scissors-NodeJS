@@ -6,21 +6,24 @@ const server = http.createServer((request, response) => {
     // Handle incoming requests and send responses here
 
     // TODO: Create a url object with request url and host name
-    const url = new URL(request.url, `http://${request.headers.host}`); 
+    const url = new URL(request.url, `http://${request.headers.host}`);
     // TODO: Create a switch statement based on pathname of url
     switch (url.pathname) {
         case '/':
             // Code to process GET requests goes here
+            // TODO: Check if request method is GET
+            if (request.method === 'GET') {
+                // TODO: Get value of 'name' query
+                const url.searchParams.get('name');
+                console.log('User ${name} has started playing!');
+            }
             break;
         default:
             // Code to process default case goes here
             break;
     }
-    // TODO: Check if request method is GET
-    if (request.method === 'GET') {
-        console.log(request.method); // Log request method to console
-    }
-    // TODO: Get value of 'name' query
+
+
 
     // TODO: Write response header
 
@@ -35,7 +38,10 @@ const server = http.createServer((request, response) => {
 });
 
 // TODO: Have server listen at port 4001
-
+// Start the server
+// server.listen(4001, () => {
+//     console.log('Server is listening on http://localhost:4001');
+// });
 
 // Function for handling POST responses
 function handlePostResponse(request, response) {
