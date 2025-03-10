@@ -68,15 +68,14 @@ Log the value of the 'name' query to the console.
 
 The .get() method of url.searchParams takes a string for the query key as its argument.
 
-7.
-Next, still inside the if statement checking for 'GET' requests, write a response header. Set the status code as 200 and the status message as a JSON array that contains the 'Content-Type' key and 'text/html' value.
+[X] 7. Next, still inside the if statement checking for 'GET' requests, write a response header. Set the status code as 200 and the status message as a JSON array that contains the 'Content-Type' key and 'text/html' value.
 
 Remember that you can write a response header using the .writeHead() method of the response object.
-
+```js
 response.writeHead(statusCode, {
   // Headers go here
 })
-
+```
 
 8.
 We will want to display the index.html page when users access the root of our website.

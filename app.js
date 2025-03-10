@@ -13,10 +13,14 @@ const server = http.createServer((request, response) => {
             // Code to process GET requests goes here
             // TODO: Check if request method is GET
             if (request.method === 'GET') {
-                // TODO: Get value of 'name' query
-                const url.searchParams.get('name');
-                console.log('User ${name} has started playing!');
+                // Get the 'name' query parameter
+                const name = url.searchParams.get('name');
+                console.log('Name query parameter:', name); // Log the value of 'name'
+
+                // TODO: Write response header
+                response.writeHead(200, { 'Content-Type': 'text/html' });
             }
+
             break;
         default:
             // Code to process default case goes here
@@ -25,7 +29,7 @@ const server = http.createServer((request, response) => {
 
 
 
-    // TODO: Write response header
+
 
     // TODO: Pipe index.html to response
 
