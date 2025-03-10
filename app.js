@@ -2,7 +2,7 @@ const fs = require('fs');
 // TODO: Require the http module
 const http = require('http'); // Import Node.js core module
 // TODO: Create a server
-
+const server = http.createServer((request, response) => {}); // Create an HTTP server
 // TODO: Create a url object with request url and host name
 
 // TODO: Create a switch statement based on pathname of url

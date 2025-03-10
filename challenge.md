@@ -16,7 +16,7 @@ Remember that you can include a module using the require() function like below:
 const moduleName = require('moduleName');
 ```
 
-[] 2. Next, using the .createServer() method, create an HTTP server and save it as a const variable called server. Using the arrow function expression, create an anonymous callback function that recieves request and response as arguments.
+[X] 2. Next, using the .createServer() method, create an HTTP server and save it as a const variable called server. Using the arrow function expression, create an anonymous callback function that recieves request and response as arguments.
 
 You can create an anonymous function using the arrow function syntax like below:
 ```js
@@ -25,14 +25,14 @@ const myFunction = (argOne, argTwo) => {
 }
 ```
 
-Routing
-3.
-Inside the callback function of the .createServer() method, create a new URL object and save it to a const variable called url. Initialize the URL object with two arguments: request.url and http://${request.headers.host}.
+## Routing
+[] 3. Inside the callback function of the .createServer() method, create a new URL object and save it to a const variable called url. Initialize the URL object with two arguments: request.url and http://${request.headers.host}.
 
 URL is like any other JavaScript object. You can create a new instance of it like below:
 
+```js
 const url = new URL();
-
+```
 
 Provide the constructor function with appropriate arguments.
 
@@ -54,7 +54,7 @@ switch(expression){
 }
 
 
-Handling Get Requests
+## Handling Get Requests
 5.
 Inside the case for '/', create an if statement that checks if the request method is equal to 'GET'.
 
