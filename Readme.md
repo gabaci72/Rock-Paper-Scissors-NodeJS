@@ -24,7 +24,7 @@ This project implements a web-based version of the classic game Rock-Paper-Sciss
 
 3. **Start the server:**
     ```bash
-    node server.js
+    node app.js
     ```
     *(Assuming your main server file is named `app.js`. Adjust if it's different.)*
 
