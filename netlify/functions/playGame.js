@@ -18,6 +18,6 @@ exports.handler = async (event) => {
 
     return {
         statusCode: 200,
-        body: JSON.stringify({ body: result }),
+        body: JSON.stringify({ result }), // Yanıtı JSON formatında döndür
     };
 };
