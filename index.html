@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
@@ -11,6 +12,7 @@
     text-align: center;
   }
 </style>
+
 <body>
   <h1 id='title'>Welcome Stranger</h1>
   <h2>Test your fate with a game of Rock-Paper-Scissors!</h2>
@@ -30,8 +32,8 @@
       document.getElementById('title').innerText = `Welcome ${name}`
     }
 
-    function playGame (option) {
-      fetch('/.netlify/functions/playGame', { method: 'POST', body: option })
+    function playGame(option) {
+      fetch('/', { method: 'POST', body: option })
         .then(response => response.text())
         .then(text => {
           const resultElement = document.getElementById('result')
@@ -41,4 +43,5 @@
     }
   </script>
 </body>
+
 </html>
