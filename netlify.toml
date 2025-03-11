@@ -1,6 +1,6 @@
 [build]
   command = "npm run build" # Eğer bir build işleminiz varsa
-  functions = ".netlify/functions" # Fonksiyonların bulunduğu dizin
+  functions = "netlify/functions" # Fonksiyonların bulunduğu dizin
   publish = "." # Statik dosyalarınızın bulunduğu dizin (kök dizin)
 
 [functions]
