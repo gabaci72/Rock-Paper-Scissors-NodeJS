@@ -1,7 +1,14 @@
 [build]
-  functions = "functions"
+  command = "npm run build" # Eğer bir build işleminiz varsa
+  functions = ".netlify/functions" # Fonksiyonların bulunduğu dizin
+  publish = "." # Statik dosyalarınızın bulunduğu dizin (kök dizin)
 
+[functions]
+  node_bundler = "esbuild" # Node.js paket yöneticisi
+  included_files = ["**/*.html", "**/*.css", "**/*.js"] # Fonksiyonlara dahil edilecek dosyalar
 
-[[edge_functions]]
-function = "hello"
-path = "/test"
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/server/:splat"
+  status = 200
+  force = true
