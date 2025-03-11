@@ -41,10 +41,10 @@ const server = http.createServer((request, response) => {
 
 //TODO: Have server listen at port 4001
 //Start the server
-server.listen(4001, () => {
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
     console.log(`Server is listening on port ${server.address().port}`);
 });
-
 // Function for handling POST responses
 function handlePostResponse(request, response) {
     request.setEncoding("utf8");
