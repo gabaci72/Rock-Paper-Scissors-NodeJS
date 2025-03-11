@@ -4,8 +4,12 @@
   "description": "This project is the graduation project for the NodeJs foundation course.\r This project is a simple implementation of the classic game Rock-Paper-Scissors using Node.js. It serves as a basic example of how to create a web server with Node.js and handle HTTP requests.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
+  "engines": {
+    "node": "16.x"
+  },
+  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gabaci72/Rock-Paper-Scissors-NodeJS.git"
