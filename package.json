@@ -10,7 +10,9 @@
   "engines": {
     "node": "22.x"
   },
-  "dependencies": {},
+  "dependencies": {
+     "esbuild": "^0.14.36"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gabaci72/Rock-Paper-Scissors-NodeJS.git"

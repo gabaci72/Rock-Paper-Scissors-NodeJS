@@ -3,4 +3,8 @@ package-lock.json
 .vercel
 
 # Local Netlify folder
-.netlify
+.netlify/
+netlify/
+netlify.toml
+_redirects
+*.log
