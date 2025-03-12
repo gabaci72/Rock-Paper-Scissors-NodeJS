@@ -8,3 +8,5 @@ netlify/
 netlify.toml
 _redirects
 *.log
+project_review.md
+project_review.json
